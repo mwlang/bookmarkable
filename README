@@ -1,0 +1,17 @@
+== Welcome to Bookmarkable
+
+Bookmarkable provides a very small web service that lets you paste a bookmark
+and save it to your database.  There's no "fluff" such as user authentication,
+account management or anything of the like.  
+
+More than anything, this is a project for me to learn git and to explore 
+Rails > 2.2 development.  As such, I have no plans to back port to earlier
+versions of Rails.
+
+Since the goal of this project is to learn git, rails, and the so-called
+"rails-way," I'd love to hear any and all feedback and criticism for the 
+code-base and my coding techniques.  Feel free to email me, Michael Lang, at:
+   
+   mwlang (at) cybrains (dot) net
+
+
