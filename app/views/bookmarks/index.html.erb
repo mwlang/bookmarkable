@@ -1,0 +1,26 @@
+<h1>Listing Bookmarks</h1>
+
+<table>
+  <tr>
+  </tr>
+
+<% for bookmark in @bookmarks %>
+  <tr>
+    <td><%= link_to bookmark.title_or_url, bookmark.url, :title => bookmark.description, :target => "_blank" %></td>
+    <td><%= link_to 'Show', bookmark %></td>
+    <td><%= link_to 'Edit', edit_bookmark_path(bookmark) %></td>
+    <td><%= link_to 'Destroy', bookmark, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New bookmark', new_bookmark_path %>
+
+<hr />
+
+<% Bookmark.keyword_counts.each do |keyword| %>
+  <span style="font-size: 1.<%= keyword.count %>em;"><%= h keyword.name %></span>
+<% end %>
+  

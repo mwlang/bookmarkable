@@ -1,0 +1,17 @@
+development:
+  adapter: mysql
+  host: localhost
+  user: root
+  database: bookmarkable_development
+
+test:
+  adapter: mysql
+  host: localhost
+  user: root
+  database: bookmarkable_test
+
+production:
+  adapter: mysql
+  host: localhost
+  user: root
+  database: bookmarkable_development

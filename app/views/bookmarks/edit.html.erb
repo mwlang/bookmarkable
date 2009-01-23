@@ -1,0 +1,13 @@
+<h1>Editing Bookmark</h1>
+
+<% form_for(@bookmark) do |f| %>
+  <%= f.error_messages %>
+  <%= render :partial => 'form' %>
+
+  <fieldset>
+    <%= f.submit "Update" %>
+    <%= link_to 'Show', @bookmark %> |
+    <%= link_to 'Back', bookmarks_path %>
+  </fieldset>
+<% end %>
+

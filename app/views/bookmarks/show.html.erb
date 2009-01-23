@@ -1,0 +1,26 @@
+
+<label>Title</label>
+<p><%= h @bookmark.title %></p>
+
+<label>URL</label>
+<p><%= link_to @bookmark.url, @bookmark.url, :target => "_blank" %></p>
+
+<label>Author</label>
+<p><%= h @bookmark.author %></p>
+
+<label>Keywords</label>
+<p><%= h @bookmark.keyword_list.join(', ') %></p>
+
+<label>Note</label>
+<p><%= h @bookmark.note %></p>
+
+<% form_for(@bookmark, :url => {:id => @bookmark, :action => 'webscrape'}) do |f| %>
+  <%= f.error_messages %>
+  <fieldset>
+    <%= f.submit "Webscrape" %> | 
+    <%= link_to 'Edit', edit_bookmark_path(@bookmark) %> |
+    <%= link_to 'Back', bookmarks_path %> |
+    <%= link_to 'New bookmark', new_bookmark_path %>
+  </fieldset>
+<% end %>
+

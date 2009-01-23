@@ -1,0 +1,27 @@
+<fieldset>
+  <legend>Bookmark</legend>
+    <p>
+      <label>Bookmark (fully-qualified URL)</label>
+      <%= text_field :bookmark, :url, :value => @bookmark.url %>
+    </p>
+
+    <p>
+      <label>Title (auto-populated by the site's head:title)</label>
+      <%= text_field :bookmark, :title, :value => @bookmark.title %>
+   </p>
+
+    <p>
+      <label>Tags (comma separated list auto-populated by the site's meta-key:keywords)</label>
+      <%= text_field :bookmark, :keyword_list, :value => @bookmark.keyword_list.join(', ') %>
+   </p>
+
+    <p>
+      <label>Description (auto-populated by the site's meta-key:description)</label>
+      <%= text_area :bookmark, :description, :value => @bookmark.description %>
+    </p>
+
+    <p>
+      <label>Note</label>
+      <%= text_area :bookmark, :note, :value => @bookmark.note %>
+    </p>
+</fieldset>
