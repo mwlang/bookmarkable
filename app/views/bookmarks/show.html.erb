@@ -11,16 +11,18 @@
 <label>Keywords</label>
 <p><%= h @bookmark.keyword_list.join(', ') %></p>
 
+<label>Description</label>
+<p><%= h @bookmark.description %></p>
+
 <label>Note</label>
 <p><%= h @bookmark.note %></p>
 
 <% form_for(@bookmark, :url => {:id => @bookmark, :action => 'webscrape'}) do |f| %>
   <%= f.error_messages %>
   <fieldset>
-    <%= f.submit "Webscrape" %> | 
+    <%= f.submit "Webscrape" %> |
     <%= link_to 'Edit', edit_bookmark_path(@bookmark) %> |
     <%= link_to 'Back', bookmarks_path %> |
     <%= link_to 'New bookmark', new_bookmark_path %>
   </fieldset>
 <% end %>
-

@@ -19,8 +19,3 @@
 <%= link_to 'New bookmark', new_bookmark_path %>
 
 <hr />
-
-<% Bookmark.keyword_counts.each do |keyword| %>
-  <span style="font-size: 1.<%= keyword.count %>em;"><%= h keyword.name %></span>
-<% end %>
-  

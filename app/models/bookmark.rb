@@ -35,7 +35,7 @@ class Bookmark < ActiveRecord::Base
       name = meta_name(value)
       content = value.attributes['content']
       self.description = content if name == 'description' and (self.description.empty? or overwrite)
-      self.author = content if name == 'author' and (self.author.empty? or overwrite)
+      self.author = content if name == 'author' and (self.author.nil? or self.author.empty? or overwrite)
       self.keyword_list = content if name == 'keywords' and (self.keyword_list.empty? or overwrite)
     end
   end
